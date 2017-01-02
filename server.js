@@ -48,6 +48,6 @@ app.get('/sitemap.xml', (req, res) => {
 });
 app.use('/', Router.router);
 
-app.listen(3030, function () {
-	console.log("Brodies Is live on 3030");
+app.listen(9090, function () {
+	console.log("Brodies Is live on 9090");
 });
