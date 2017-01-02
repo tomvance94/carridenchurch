@@ -1,0 +1,22 @@
+{{> head}}
+  <body class='app-news'>
+    {{> header}}
+
+    <div class='wrapper'>
+      <h1>{{page.title}}</h1>
+
+
+      <section class='posts'>
+        {{#each page.posts}}
+          <div class='post'>
+            <p class='post__title'>{{this.fields.postTitle}}</p>
+            <time class='post__time'>{{moment this.fields.postedDate}}</time>
+            <p class='post__summary'>{{this.fields.summary}}</p>
+            <a href='/news/{{this.fields.urlName}}' class='button button--simple'>Read More</a>
+          </div>
+        {{/each}}
+      </section>
+
+    </div>
+
+{{> footer}}

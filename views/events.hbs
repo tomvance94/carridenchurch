@@ -1,0 +1,22 @@
+{{> head}}
+  <body class='app-events'>
+    {{> header}}
+
+    <div class='wrapper'>
+      <h1>Events At Carriden</h1>
+
+      {{#each page.events}}
+        <div class='event'>
+          <p class='event__title'>{{this.fields.name}}</p>
+          <p class='event__description'>{{this.fields.description}}</p>
+          <p class='event__title'>Dates: </p>
+          <ul class='event__dates'>
+          {{#each this.fields.dates}}
+            <li>{{this}}</li>
+          {{/each}}
+          </ul>
+        </div>
+      {{/each}}
+    </div>
+
+{{> footer}}

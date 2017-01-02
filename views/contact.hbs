@@ -1,0 +1,48 @@
+{{> head}}
+  <body class='app-contact'>
+    {{> header}}
+
+    <div class='wrapper'>
+      <h1>Get In Contact</h1>
+
+      <section class='contact'>
+        <aside class='details'>
+          <h2>Contact Details</h2>
+          <address>
+            Carriden Church,<br>
+            Bo'ness,<br>
+            Edinburgh,<br>
+            EH51 9LU
+          </address>
+
+          <p><a class='helper link' href='/about#contacts'><i class='fa fa-external-link'></i> View Important Contacts</a></p>
+        </aside>
+
+        <form class="" action="/contact" method="post">
+          <h2>Enquiries</h2>
+          <div class='form-group'>
+            <label for="name">Your Name <span>*</span></label>
+            <input type='text' name='name' id='name' />
+          </div>
+
+          <div class='form-group'>
+            <label for="email">Your Email <span>*</span></label>
+            <input type='text' name='email' id='email' />
+          </div>
+
+          <label for="message">Your Message <span>*</span></label>
+          <textarea name="message" rows="8" cols="80"></textarea>
+
+          <button type="submit" class='button button--simple' name="">Send</button>
+        </form>
+      </section>
+
+      <section class='map'>
+        <a href='https://www.google.co.uk/maps/place/Carriden+Parish+Church/@56.0143696,-3.5773321,17z' target="_blank">
+          <img src="http://maps.google.com/maps/api/staticmap?center=56.014439,-3.575191&zoom=17&markers=color:blue|Carriden+Parish+Church&amp;size=350x250&amp;scale=2&amp;sensor=false" />
+        </a>
+        <p><a class='helper link' href='https://www.google.co.uk/maps/place/Carriden+Parish+Church/@56.0143696,-3.5773321,17z' target="_blank"><i class='fa fa-external-link'></i> View Larger Map</a></p>
+      </section>
+    </div>
+
+{{> footer}}

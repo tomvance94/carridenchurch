@@ -1,0 +1,17 @@
+{{> head}}
+  <body class='app-photos'>
+    {{> header}}
+
+    <div class='wrapper'>
+      <h1>{{page.title}}</h1>
+
+      {{#each page.photos}}
+        <div class='photo'>
+          <a class='photo__thumb' href="{{this.fields.file.url}}?w=650&amp;fl=progressive" data-title='{{this.fields.title}}' data-lightbox="gallery">
+            <img src="{{this.fields.file.url}}?w=320&amp;fit=fill&amp;fl=progressive" alt="" />
+          </a>
+        </div>
+      {{/each}}
+    </div>
+
+{{> footer}}

@@ -1,0 +1,4 @@
+node_modules/
+config/core.js
+.idea/
+lib/router_old/

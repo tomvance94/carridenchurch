@@ -1,0 +1,40 @@
+{{> head}}
+  <body class='app-home'>
+    {{> header}}
+
+    <div class='wrapper'>
+      <section class='past'>
+        <img class='past__image' src="images/past.png" alt="">
+
+        <div class='past__content'>
+          <h1>{{page.title}}</h1>
+          <p>{{page.primaryContent}}</p>
+
+          <a class='button button--simple' href="/about">Find out More</a>
+        </div>
+      </section>
+
+      <section class='services'>
+        <section class='well services__church'>
+          <h2>Church Services</h2>
+          {{#each page.churchServices}}
+            <div class='service'>
+              <p class='service__title'>{{this.fields.name}}</p>
+              <p class='service__content'>{{this.fields.description}}</p>
+            </div>
+          {{/each}}
+        </section>
+
+        <section class='well services__special'>
+          <h2>Special Services</h2>
+          {{#each page.specialServices}}
+            <div class='service'>
+              <p class='service__title'>{{this.fields.name}}</p>
+              <p class='service__content'>{{this.fields.description}}</p>
+            </div>
+          {{/each}}
+        </section>
+      </section>
+    </div>
+
+{{> footer}}
