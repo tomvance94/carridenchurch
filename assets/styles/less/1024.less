@@ -20,14 +20,13 @@
 
 
 .app-about{
-
 }
 
 .app-photos{
   .photos{
     .photo{width:328px;margin:0 0 20px;
-      &:nth-of-type(odd){margin:0;}
-      &:nth-of-type(3n-1){margin:0 20px 20px}
+      &:nth-of-type(odd){margin-right:0 !important;}
+      &:nth-of-type(3n-1){margin:0 20px 20px !important}
     }
   }
 }
@@ -37,6 +36,12 @@
     .details{width:250px;float: left;border-bottom: none;}
     .form{float: left;width:664px;margin-left: 20px;padding-left: 89px;border-left: 1px solid @secondary;
       .form-group{width:322px;}
+    }
+  }
+  .contacts{
+    .person{min-height: 300px;width:288px;
+      &:nth-of-type(odd){margin-right: 0}
+      &:nth-of-type(3n-1){margin:0 20px 20px}
     }
   }
 }

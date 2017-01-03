@@ -11,8 +11,7 @@ AboutController.load = function(params, callback) {
 		callback(null, { page: {
 			title: fields.title,
 			primaryContent: marked(fields.primaryContent),
-			secondaryTitle: fields.secondaryTitle,
-			contacts: fields.contacts
+			secondaryTitle: fields.secondaryTitle
 		}});
 	}).catch(err => {
 		console.log(err);

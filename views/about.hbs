@@ -6,23 +6,6 @@
       <h1>{{page.title}}</h1>
 
       <p>{{{page.primaryContent}}}</p>
-
-
-      <section class='contacts' id='contacts'>     
-      <h2>{{page.secondaryTitle}}</h2>
-
-      {{#each page.contacts}}
-        <div class='contact'>
-          <p class='contact__name'>{{this.fields.name}}</p>
-          <p class='contact__position'>{{this.fields.position}}</p>
-          <address>
-            {{marked this.fields.address}}
-          </address>
-          <p class='contact__tel'><a href='tel: {{this.fields.telephone}}'>{{this.fields.telephone}}</a></p>
-          <p class='contact__email'><a href='mailto:{{this.fields.email}}'>{{this.fields.email}}</a></p>
-        </div>
-      {{/each}}
-      </section>
     </div>
 
 {{> footer}}

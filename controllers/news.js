@@ -13,7 +13,6 @@ NewsController.load = function(params, callback) {
         title: fields.title,
         posts: posts
       }});
-
     });
 	}).catch(err => {
 		console.log(new Error(err));
@@ -26,6 +25,14 @@ NewsController.getPosts = function(params, callback) {
   let contentful = params.defaults.contentful;
 
   contentful.getEntries({'content_type': 'newsPost'}).then( page => {
+		page.items.sort( (a, b) => {
+			let aDate = new Date(a.fields.postedDate);
+			let bDate = new Date(b.fields.postedDate);
+			if(aDate > bDate) return -1;
+			if(aDate < bDate) return 1;
+
+			return 0;
+		});
     callback(null, page.items);
   }).catch( err => {
     console.log(new Error(err));
@@ -35,13 +42,14 @@ NewsController.getPosts = function(params, callback) {
 
 NewsController.post = function(params, callback) {
   let contentful = params.defaults.contentful;
-  console.log(params.post);
+
   contentful.getEntries({'content_type': 'newsPost','fields.urlName': params.post}).then( page => {
     let fields = page.items[0].fields;
     callback(null, {page: {
       title: fields.postTitle,
       date: fields.postedDate,
-      content: marked(fields.content)
+      content: marked(fields.content),
+			audio: fields.recording
     }});
   }).catch(err => {
     console.log(new Error(err));

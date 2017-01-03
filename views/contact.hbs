@@ -15,7 +15,7 @@
             EH51 9LU
           </address>
 
-          <p><a class='helper link' href='/about#contacts'><i class='fa fa-external-link'></i> View Important Contacts</a></p>
+          <p><a class='helper link' href='https://www.google.co.uk/maps/place/Carriden+Parish+Church/@56.0143696,-3.5773321,17z' target="_blank"><i class='fa fa-external-link'></i> View On Google Maps</a></p>
         </aside>
 
         <form class="form" action="/contact" method="post">
@@ -37,11 +37,20 @@
         </form>
       </section>
 
-      <section class='map'>
-        <a href='https://www.google.co.uk/maps/place/Carriden+Parish+Church/@56.0143696,-3.5773321,17z' target="_blank">
-          <img src="http://maps.google.com/maps/api/staticmap?center=56.014439,-3.575191&zoom=17&markers=color:blue|Carriden+Parish+Church&amp;size=350x250&amp;scale=2&amp;sensor=false" />
-        </a>
-        <p><a class='helper link' href='https://www.google.co.uk/maps/place/Carriden+Parish+Church/@56.0143696,-3.5773321,17z' target="_blank"><i class='fa fa-external-link'></i> View Larger Map</a></p>
+      <section class='contacts' id='contacts'>
+      <h2>Important Contacts</h2>
+
+      {{#each page.contacts}}
+        <div class='person'>
+          <p class='person__name'>{{this.fields.name}}</p>
+          <p class='person__position'>{{this.fields.position}}</p>
+          <address>
+            {{marked this.fields.address}}
+          </address>
+          <p class='person__tel'><a href='tel: {{this.fields.telephone}}'>{{this.fields.telephone}}</a></p>
+          <p class='person__email'><a href='mailto:{{this.fields.email}}'>{{this.fields.email}}</a></p>
+        </div>
+      {{/each}}
       </section>
     </div>
 
