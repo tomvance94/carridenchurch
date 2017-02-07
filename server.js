@@ -21,10 +21,7 @@ var contentfulClient = contentful.createClient({
 
 app.use(compression());
 app.use(session({secret: 'keyboard cat', cookie: {maxAge: null}, saveUninitialized: true, resave: true}));
-// app.use(express.static('assets', {
-// 	maxage: '7d',
-// 	'Cache-Control': 'public'
-// }));
+
 
 app.use(express.static('assets'));
 
