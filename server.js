@@ -14,8 +14,8 @@ const express = require('express'),
 const myCache = new NodeCache({stdTTL: 86400, checkperiod: 120});
 
 var contentfulClient = contentful.createClient({
-	space: 'hgsqrvkidnaa',
-	accessToken: '4d37b49edb811e587377d27c008fe5ff52a022e1b3916078570f0c6319f27c5e'
+	space: '70gp6c1vp3hf',
+	accessToken: 'ef37a8331e3c798886bda863b82be51ab6769dc20ecd8217b5368f07a1e61028'
 });
 
 
