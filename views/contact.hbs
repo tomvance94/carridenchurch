@@ -18,7 +18,7 @@
           <p><a class='helper link' href='https://www.google.co.uk/maps/place/Carriden+Parish+Church/@56.0143696,-3.5773321,17z' target="_blank"><i class='fa fa-external-link'></i> View On Google Maps</a></p>
         </aside>
 
-        <form class="form" action="/contact" method="post">
+        <form class="form" action="https://formspree.io/dsontoma@hotmail.com" method="post">
           <h2>Enquiries</h2>
           {{#if message}}
             <p class='alert alert--success'>Success! Your message has been sent </p>
@@ -30,7 +30,7 @@
 
           <div class='form-group'>
             <label for="email">Your Email <span>*</span></label>
-            <input required type='text' name='email' id='email' />
+            <input required type='text' name='_replyto' id='email' />
           </div>
 
           <label for="message">Your Message <span>*</span></label>
